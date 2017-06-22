@@ -1,0 +1,10 @@
+<h1>Add Track</h1>
+
+<form action="<%=tracks_url%>", method="POST" >
+  <label for="track_song">Track</label>
+  <input id="track_song", name="track[song]", type="text">
+  <br/>
+  <label for="track_lyrics">Enter Lyrics(optional)</label><br/>
+  <textarea id="track_lyrics"> <%= @track.lyrics %> </textarea>
+  <input type="submit", value="Add Track">
+</form>

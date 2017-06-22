@@ -1,0 +1,8 @@
+<h1><%= @track.song %></h1>
+
+<p> <%= @track.lyrics %></p>
+
+<%= button_to "Edit Track Info", edit_track_url, method: :get %>
+<%= button_to "Delete Track", track_url(@track), method: :delete %>
+<br/>
+<%= button_to "Back to home", bands_url, method: :get %>

@@ -1,0 +1,10 @@
+<h1>Edit Album Info</h1>
+
+<form action="<%= album_url(@album) %>", method="POST">
+  <input type="hidden", name="_method" value="PATCH">
+  <input type="hidden", name="album[band_id]", value="<%=band[id]%>">
+  <label for="album_name">Album Name</label>
+  <input id="album_name", name="album[title]", type="text", value="<%= @album.title %>">
+  <input type="submit", value="Edit!">
+</form>
+<!-- don't forget to fix band_id part -->

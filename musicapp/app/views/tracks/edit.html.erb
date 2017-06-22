@@ -1,0 +1,10 @@
+<h1>Edit Track Info</h1>
+
+<form action="<%= track_url(@track) %>", method="POST">
+  <input type="hidden", name="_method" value="PATCH">
+  <label for="track_song">Track Name</label>
+  <input id="track_song", name="track[song]", type="text", value="<%= @track.song %>">
+  <label for="track_lyrics">Lyrics</label>
+  <textarea name="track[lyrics]"> <%= @track.lyrics %></textarea>
+  <input type="submit", value="Edit!">
+</form>
